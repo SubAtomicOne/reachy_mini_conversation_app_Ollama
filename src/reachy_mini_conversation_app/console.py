@@ -23,7 +23,7 @@ from scipy.signal import resample
 from reachy_mini import ReachyMini
 from reachy_mini.media.media_manager import MediaBackend
 from reachy_mini_conversation_app.config import config
-from reachy_mini_conversation_app.openai_realtime import OpenaiRealtimeHandler
+from reachy_mini_conversation_app.openai_realtime import OllamaHandler
 from reachy_mini_conversation_app.headless_personality_ui import mount_personality_routes
 
 
@@ -49,7 +49,7 @@ class LocalStream:
 
     def __init__(
         self,
-        handler: OpenaiRealtimeHandler,
+        handler: OllamaHandler,
         robot: ReachyMini,
         *,
         settings_app: Optional[FastAPI] = None,
